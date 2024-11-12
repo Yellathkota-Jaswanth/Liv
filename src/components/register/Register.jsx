@@ -56,7 +56,6 @@ function Register() {
                 <select
                    label="UserType"
                    variant="outlined"
-                   fullWidth
                     margin="normal"
                     value={userType}
                     onChange={(e) => setuserType(e.target.value)}>
