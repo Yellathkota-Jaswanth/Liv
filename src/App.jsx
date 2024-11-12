@@ -11,7 +11,6 @@ import Dashboard from './components/pages/Dashboard'
 import Home from '../src/components/pages/Home'
 import AppointmentsPage from './components/pages/AppointmentsPage'
 import Payment from './components/payment/Payment'
-import Chat from './components/chat/Chat'
 
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
             <Route path="/Dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path="/Appointments" element={<PrivateRoute><AppointmentsPage /></PrivateRoute>} />
             <Route path="/Payment" element={<PrivateRoute><Payment /></PrivateRoute>} />
-            <Route path="/Chat" element={<PrivateRoute><Chat /></PrivateRoute>} />
 
 
 

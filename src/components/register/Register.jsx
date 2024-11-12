@@ -8,7 +8,7 @@ function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [userType, setuserType] = useState('');
+    const [userType, setuserType] = useState('client');
 
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -53,14 +53,16 @@ function Register() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}>
                 </TextField>
-                <TextField
-                    label="UserType"
-                    variant="outlined"
-                    fullWidth
+                <select
+                   label="UserType"
+                   variant="outlined"
+                   fullWidth
                     margin="normal"
                     value={userType}
                     onChange={(e) => setuserType(e.target.value)}>
-                </TextField>
+                        <option value="client">client</option>
+                        <option value="counselor">counselor</option>
+                </select>
                 <Button type="submit" variant="contained" color="primary" fullWidth>Register</Button>
             </form>
         </Container>

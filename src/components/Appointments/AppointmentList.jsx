@@ -3,14 +3,12 @@ import axios from 'axios';
 import { Button } from '@mui/material';
 import payment from '../payment/Payment'
 import { useNavigate } from 'react-router-dom';
-import Chat from '../chat/Chat'
 
 
 const AppointmentList = () => {
   const [appointments, setAppointments] = useState([]);
   const [type, setType] = useState(localStorage.getItem('type'));
   const [meetUrl,setMeetUrl] = useState('');
-  const [showChat,setshowChat]=useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -55,8 +53,6 @@ const AppointmentList = () => {
             <p>{appointment.link && (
               <><a href={appointment.link}>Click here</a>
             <Button onClick={()=> navigate('/payment')}>Payment</Button>
-            <Button onClick={()=> setshowChat(!showChat)}>Chat</Button>
-            {showChat && <Chat />}
             </>)}</p>
             
           </li>
