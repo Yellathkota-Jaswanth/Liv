@@ -4,6 +4,7 @@ Welcome to counselling website where clients will be able to connect with counse
 
 ## 🖥️ Tech Stack
 - **Frontend:** HTML5, CSS3, JavaScript,Recat-Js
+- **Backend:** NodeJs,express,Mongodb
 - **Deployment:** Render
 
 
